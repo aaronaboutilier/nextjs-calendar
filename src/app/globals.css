@@ -19,3 +19,87 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+.annual-calendar {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.months-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.month {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  min-height: 200px;
+}
+
+.month-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.day {
+  color: var(--background);
+  position: relative;
+}
+
+.active-day {
+  border: 1px solid #ddd;
+}
+
+.inactive-day {
+}
+
+.past {
+  background-color: #a19f9f; /* Light gray for past dates */
+}
+
+.today {
+  background-color: #3bd8ff; /* Bright color for today */
+  font-weight: bold;
+}
+
+.future {
+  background-color: #fdffff; /* Light blue for future dates */
+}
+
+.holiday {
+  color: #15658a; /* Light blue for future dates */
+  font-weight: bold;
+}
+.payday {
+  color: #158a15; /* Light blue for future dates */
+  font-weight: bold;
+}
+
+.day:nth-child(7n + 1) {
+  /* Sunday */
+  color: red;
+}
+
+.day:nth-child(7n) {
+  /* Sunday */
+  color: red;
+}
+
+.day.active-day:hover {
+  background-color: #1cbb51;
+}
+
+.tooltip {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #000;
+  padding: 5px;
+  z-index: 10;
+  min-width: 150px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
