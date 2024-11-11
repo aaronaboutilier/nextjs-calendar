@@ -40,13 +40,16 @@ body {
 .month-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 5px;
+  gap: 3px;
   margin-top: 10px;
 }
 
 .day {
   color: var(--background);
   position: relative;
+  min-width: 40px;
+  min-height: 40px;
+  user-select: none;
 }
 
 .active-day {
